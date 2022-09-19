@@ -26,4 +26,10 @@ class Contoh1 extends CI_Controller {
               olahraga yang saya suka adalah
               Bulutangkis<h3>";
 	}
+    public function penjumlahan($n1, $n2)
+    {
+        $this->load->model('Model_latihan');
+        $hasil = $this->Model_latihan->jumlah($n1, $n2);
+        echo "Hasil Penjumlahan dari". $n1 ." + ". $n2 ." = ".$hasil;
+    }
 }
